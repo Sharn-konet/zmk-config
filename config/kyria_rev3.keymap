@@ -95,34 +95,6 @@
         };
     };
 
-    macros {
-        pass: pass {
-            label = "pass";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <5>;
-            bindings
-                = <&macro_tap &kp LS(W) &kp E &kp L &kp C &kp O &kp M &kp E &kp AT &kp N1 &kp N2 &kp N3>
-                ; 
-        };
-
-        neweml: neweml {
-            label = "NEWEMAIL";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <500>;
-            tap-ms = <5>;
-            bindings
-                = <&macro_tap &kp LG(T)>
-                , <&macro_tap &kp K_APP>
-                , <&macro_tap &kp UP>
-                , <&macro_wait_time 100>
-                , <&macro_tap &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp UP &kp ENTER &kp LG(T) &kp LGUI &kp LGUI &kp LA(TAB)>
-                ; 
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
