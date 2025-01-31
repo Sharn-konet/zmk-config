@@ -48,7 +48,7 @@
 &kp ESC  &kp Q  &kp W  &kp E     &kp R  &kp T                                                    &kp Y       &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp TAB  &kp A  &kp S  &kp D     &kp F  &kp G                                                    &kp H       &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &mo 3    &kp Z  &kp X  &kp C     &kp V  &kp B       &tog 4     &none         &none    &none      &kp N       &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                       &kp C_PP  &mo 1  &kp LSHIFT  &kp LCTRL  &kp LEFT_GUI  &kp ESC  &kp SPACE  &kp RSHIFT  &mo 2  &kp C_PP
+                       &kp C_PP  &mo 1  &kp LSFT  &kp LCTL  &kp LGUI  &kp ESC  &kp SPACE  &kp RSFT  &mo 2  &kp C_PP
             >;
 
             sensor-bindings = <&left_encoder_rotate &right_encoder_rotate>;
@@ -57,7 +57,7 @@
 
         NUMBERS {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0     &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0     &trans
 &trans     &trans  &trans  &kp LBKT  &kp RBKT  &trans                                  &kp HOME      &kp N4  &kp N5  &kp N6  &kp RIGHT  &trans
 &trans     &trans  &trans  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &kp END       &kp N1  &kp N2  &kp N3  &trans     &trans
                            &trans    &trans    &none   &trans  &trans   &trans  &trans  &trans        &kp N0  &kp N0
@@ -85,7 +85,7 @@
                                           &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans    &trans          &trans
             >;
 
-            label = "FUNCTIONS";
+            display-name = "FUNCTIONS";
         };
 
         GAMING {
