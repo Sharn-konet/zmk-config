@@ -36,7 +36,7 @@
         right_encoder_rotate: right_encoder_rotate {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&inc_dec_kp C_VOL_DN>, <&inc_dec_kp C_VOL_UP>;
+            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
         };
     };
 
@@ -91,12 +91,12 @@
         GAMING {
             bindings = <
 &none  &none      &kp Q  &kp W  &kp E  &kp R                                  &none  &none  &none  &none  &none  &none
-&none  &kp LSHFT  &kp A  &kp S  &kp D  &kp F                                  &none  &none  &none  &none  &none  &none
+&none  &kp LSFT  &kp A  &kp S  &kp D  &kp F                                  &none  &none  &none  &none  &none  &none
 &none  &none      &none  &none  &none  &none  &trans     &none  &none  &none  &none  &none  &none  &none  &none  &none
                          &none  &none  &kp E  &kp SPACE  &kp R  &none  &none  &none  &none  &none
             >;
 
-            label = "GAMING";
+            display-name = "GAMING";
         };
     };
 };
