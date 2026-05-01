@@ -40,6 +40,20 @@
         };
     };
 
+    macros {
+        bt_mac: bt_mac {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0>, <&macro_param_1to1>, <&bt BT_SEL MACRO_PLACEHOLDER>;
+        };
+
+        bt_win: bt_win {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 5>, <&macro_param_1to1>, <&bt BT_SEL MACRO_PLACEHOLDER>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -80,7 +94,7 @@
         FUNCTION {
             bindings = <
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                                        &kp F7    &kp F8          &kp F9        &kp F10    &kp F11  &kp F12
-&out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                  &kp LEFT  &kp DOWN        &kp UP        &kp RIGHT  &trans   &trans
+&out OUT_TOG  &bt_mac 0     &bt_win 1     &bt_mac 2     &bt_mac 3     &bt_mac 4                                     &kp LEFT  &kp DOWN        &kp UP        &kp RIGHT  &trans   &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans    &trans          &trans        &trans     &trans   &trans
                                           &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans    &trans          &trans
             >;
@@ -97,6 +111,17 @@
             >;
 
             display-name = "GAMING";
+        };
+
+        WINDOWS {
+            bindings = <
+&trans  &trans  &trans  &trans   &trans  &trans                                                  &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans                                                  &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans     &trans      &trans           &trans     &trans  &trans  &trans  &trans  &trans
+                        &trans   &trans  &trans  &trans  &trans  &kp LCTRL  &trans  &trans  &trans  &trans
+            >;
+
+            display-name = "WINDOWS";
         };
     };
 };
